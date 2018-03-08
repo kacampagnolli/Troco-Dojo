@@ -7,7 +7,7 @@ const init = () =>{
     if(process.env.VALOR && process.env.VALORPAGO ) {
         const troco =((parseFloat(process.env.VALORPAGO!) * 10) - (parseFloat(process.env.VALOR!) * 10 ))/ 10
         console.log(`O troco é de: ${troco}`);
-        console.log('-------- Descriçaõ do Troco ---------');
+        console.log('-------- Descrição do Troco ---------');
         const valida: Validator = isValid(troco)
         if (valida.validado) {
             const c = new CaulculaTroco(troco)
