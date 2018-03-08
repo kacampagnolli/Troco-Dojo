@@ -6,7 +6,7 @@ import { Validator } from './types';
 const init = () =>{
     if(process.env.VALOR && process.env.VALORPAGO ) {
         const troco =((parseFloat(process.env.VALORPAGO!) * 10) - (parseFloat(process.env.VALOR!) * 10 ))/ 10
-        console.log(`O troco é de: ${trocotoFixed(2)}`);
+        console.log(`O troco é de: ${troco.toFixed(2)}`);
         console.log('-------- Descrição do Troco ---------');
         const valida: Validator = isValid(troco)
         if (valida.validado) {
